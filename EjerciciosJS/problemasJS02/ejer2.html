@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>alert</title>
+</head>
+<body>
+    <center>
+    <h1>EJERCICIO DE ALERT EN LA LISTA</h1></center>
+    <ul>
+        <li id="C1" data-id="US" data-dial-code="1">USA</li>
+        <li id="C2" data-id="CA" data-dial-code="1">Canada</li>
+        <li id="C3" data-id="FF" data-dial-code="3">FRANCE </li>
+    </ul>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+           
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 30px;
+        }
+
+        li {
+            margin: 0 auto;
+            background-color: #ffffff;
+            padding: 10px;
+            width: 200px;
+            margin-bottom: 5px;
+            cursor: pointer;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease;
+        }
+
+       
+    </style>
+    
+    <script>
+        const elementos=document.querySelectorAll('li');
+        elementos.forEach((elemento) =>{
+            elemento.addEventListener('click',()=>{
+                let id=elemento.id;
+                let pais=elemento.dataset.id;
+                let dialCode=elemento.dataset.dialCode;
+                let codePais=elemento.textContent;
+                alert(`ID:${id}\ codigo de pais: ${codePais} \Codigo marcación: ${dialCode}\nombre del país: ${codePais}`);
+
+            });
+        });
+      
+
+    </script>
+    
+</body> 
+</html>
