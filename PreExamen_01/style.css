@@ -1,0 +1,36 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.panel {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 300px;
+}
+input{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+select{
+    border: 1px solid #ccc;
+    border-radius: 3px;
+
+}
+.btn {
+    margin-top: 10px;
+    padding: 8px 16px;
+    cursor: pointer;
+    background-color: #31a535;
+    color: white;
+    border: none;
+    border-radius: 4px;
+}
+.btn:hover {
+    background-color: #2c7590;
+}
