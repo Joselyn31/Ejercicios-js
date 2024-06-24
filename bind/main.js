@@ -40,11 +40,15 @@ export class TemplateBind extends LitElement{
             Event handler binding
             <button @click="${this.clickHandler}">Click</button>
         </div>
-        <p><input type="checkbox" ?checked="${this.activo}">checkbox</p>
+        <p><input type="checkbox" ?checked="${this.activo}" @change="${this.doChange}">checkbox</p>
         `;
     }
     clickHandler(e){
         console.log(e.target);
+    }
+       doChange(e){
+        this.activo = e.target.checked;
+        console.log("Estado: "+this.activo);
     }
    
 
