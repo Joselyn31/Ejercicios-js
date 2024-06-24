@@ -7,6 +7,7 @@ export class TemplateBind extends LitElement{
         this.prop2= 'mydiv';
         this.prop3= true;
         this.prop4= 'pie';
+        this.activo=true;
         
     }
 
@@ -15,7 +16,8 @@ export class TemplateBind extends LitElement{
             prop1:{type:String},
             prop2:{type:String},
             prop3:{type:Boolean},
-            prop4:{type:String}
+            prop4:{type:String},
+            activo:{type:Boolean}
         };
     
 
@@ -38,6 +40,7 @@ export class TemplateBind extends LitElement{
             Event handler binding
             <button @click="${this.clickHandler}">Click</button>
         </div>
+        <p><input type="checkbox" ?checked="${this.activo}">checkbox</p>
         `;
     }
     clickHandler(e){
